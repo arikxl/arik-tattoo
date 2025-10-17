@@ -1,8 +1,24 @@
+'use client'
+
+
+import IdeaForm from '@/components/IdeaForm'
+import ImgPreview from '@/components/ImgPreview'
 import React from 'react'
 
 const GenerateTattooPage = () => {
+
+  const handleGenerate = (prompt) => {
+    console.log(prompt)
+    
+  }
+
+
   return (
-    <div>GenerateTattooPage</div>
+    <div>
+      <IdeaForm handleGenerate={handleGenerate} />
+      <ImgPreview />
+      
+    </div>
   )
 }
 

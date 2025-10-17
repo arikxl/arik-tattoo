@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Home = () => {
@@ -15,9 +16,11 @@ const Home = () => {
 
 
             <div className='mt-8 text-center'>
+                <Link href={'/generate'}>
                 <button className='cursor-pointer bg-amber-700 hover:bg-amber-800 font-semibold px-6 py-3 rounded-xl shadow-md'>
                     Generate a Tattoo🔥
                 </button>
+                </Link>
             </div>
 
 
@@ -27,7 +30,7 @@ const Home = () => {
                     <div className='text-7xl mb-3'>
                         ✒
                     </div>
-                    <p className='text-gray-600'>Your AI-Designed tattoo will look like this</p>
+                    <p className='mt-10 text-gray-600'>Your AI-Designed tattoo will look like this</p>
                 </div>
             </div>
         </>
