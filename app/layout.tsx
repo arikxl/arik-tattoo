@@ -28,12 +28,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-900 h-full text-white `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-900 min-h-full text-white `}
       >
         <Header />
 
         {/* <WtsupBtn /> */}
-        <main className='mx-auto px-6 py-16 h-[100vh]'>
+        <main className='mx-auto px-6 py-16 min-h-[100vh]'>
           {children}
         </main>
         <Footer />
