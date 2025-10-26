@@ -1,2 +1,21 @@
 @import "tailwindcss";
 
+
+
+/* 1. הגדרת האנימציה עצמה (מה היא עושה) */
+@keyframes fade-down {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. יצירת קלאס שמשתמש באנימציה */
+.animate-fade-down {
+    animation: fade-down 0.5s ease-out;
+}

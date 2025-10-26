@@ -5,7 +5,7 @@ const Header = () => {
   return (
       <header className='border-b'>
           <div className=' mx-auto px-6 py-6 flex'>
-              <Link href='/home'>
+              <Link href='/'>
               <div className='font-extrabold text-xl'>
                   Arik-Tattoo
               </div>
