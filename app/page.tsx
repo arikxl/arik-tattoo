@@ -5,9 +5,11 @@ export default function Home() {
     <div className="">
       <main className="">
 
-        <Link href={'/home'}>
+        <Link href={'/'}>
           LINK TO home
         </Link>
+
+        {/* <Home /> */}
 
       </main>
     </div>

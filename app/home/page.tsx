@@ -1,10 +1,16 @@
+import Hero from '@/components/Hero'
 import Link from 'next/link'
 import React from 'react'
 
 const Home = () => {
     return (
         <>
-            <div className='text-center'>
+            
+            <Hero />
+
+
+
+            {/* <div className='text-center'>
                 <h1 className='text-xl md:text-5xl font-extrabold tracking-tight leading-tight'>
                     AI Tattoo Generator
                 </h1>
@@ -32,7 +38,7 @@ const Home = () => {
                     </div>
                     <p className='mt-10 text-gray-600'>Your AI-Designed tattoo will look like this</p>
                 </div>
-            </div>
+            </div> */}
         </>
     )
 }

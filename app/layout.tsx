@@ -30,10 +30,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-900 min-h-full text-white `}
       >
-        <Header />
+        {/* <Header /> */}
 
         {/* <WtsupBtn /> */}
-        <main className='mx-auto px-6 py-16 min-h-[100vh]'>
+        <main className='mx-auto min-h-[100vh] overflow-x-hidden'>
           {children}
         </main>
         <Footer />
