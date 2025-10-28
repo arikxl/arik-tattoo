@@ -10,11 +10,7 @@ export default function Home() {
     <div className="">
       <main className="">
 
-        {/* <Link href={'/'}>
-          LINK TO home
-        </Link> */}
         <div className="block md:hidden fixed top-0 left-0 z-50 text-slate-700 bg-white shadow-md animate-fade-down w-full">
-
           <Header />
         </div>
         <Hero />

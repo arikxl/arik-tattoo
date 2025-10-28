@@ -15,7 +15,7 @@ const Hero = () => {
                     <Logo />
                 </div>
 
-                <h2 className='text-4xl md:text-5xl lg:text-6xl text-center w-full md:w-3/4 lg:w-1/2 font-bold mb-8 text-gray-200'>
+                <h2 className='text-4xl md:text-5xl lg:text-6xl text-center w-full md:w-3/4 lg:w-1/2 font-bold mb-8 text-slate-200'>
                     קעקועים שהם יצירת מופת אישית מעוצבים במיוחד בשבילך
                 </h2>
 
