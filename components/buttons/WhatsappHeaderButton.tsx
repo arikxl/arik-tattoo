@@ -19,7 +19,7 @@ const WhatsappHeaderButton = () => {
 
   return (
       <button onClick={sendWhatsAppMessage}
-        className="hover:bg-amber-400 cursor-pointer border-4 w-60 border-amber-400 p-1 text-xl font-bold "
+      className="text-center hover:bg-amber-400 cursor-pointer border-4 w-3/4 sm:w-60 border-amber-400 p-1 text-xl font-semibold flex items-center justify-center h-full"
       >
           קביעת פגישה
     </button>

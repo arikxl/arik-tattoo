@@ -1,18 +1,16 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import WtsupBtn from "@/components/WtsupBtn";
 import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
+  subsets: ["hebrew", "latin"],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-  subsets: ["latin"],
+  subsets: ["hebrew", "latin"],
 });
 
 export const metadata: Metadata = {
@@ -26,13 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="he" dir="rtl">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-900 min-h-full text-white `}
       >
-        {/* <Header /> */}
-
-        {/* <WtsupBtn /> */}
         <main className='mx-auto min-h-[100vh] overflow-x-hidden'>
           {children}
         </main>
