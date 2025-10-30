@@ -1,8 +1,16 @@
+@import url('https://fonts.cdnfonts.com/css/black-chorola');
 @import "tailwindcss";
+
 
 html{
     scroll-behavior: smooth;
 }
+
+
+.tattoo{
+    font-family: 'Black Chorola', sans-serif;
+}
+
 
 /* 1. הגדרת האנימציה עצמה (מה היא עושה) */
 @keyframes fade-down {

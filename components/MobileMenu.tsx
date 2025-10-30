@@ -1,13 +1,23 @@
 import Link from 'next/link';
-import { NavLink } from './Header';
+
+import Logo from './Logo';
 
 type MobileMenuProps = {
     setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
     isMenuOpen: boolean;
-    navLinks: NavLink[]
 };
 
-const MobileMenu = ({ isMenuOpen, setIsMenuOpen, navLinks }: MobileMenuProps) => {
+const mobileMenuLinks = [
+    // { href: '/', label: 'דף הבית' },
+    { href: '/about', label: 'מי אני?' },
+    { href: '/generate', label: 'הדמיית AI' },
+    { href: '/faq', label: 'שאלות ותשובות' },
+    { href: '/tattoos', label: 'קעקועים' },
+    { href: '/piercings', label: 'פירסינג' },
+    { href: '/#map', label: 'מיקום' }
+];
+
+const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: MobileMenuProps) => {
     const handleLinkClick = () => {
         setIsMenuOpen(false);
     };
@@ -15,25 +25,35 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen, navLinks }: MobileMenuProps) =>
     return (
         <div
             className={`
-                fixed inset-0 bg-black bg-opacity-50 transition-opacity
+                fixed inset-0 bg-slate-700 bg-opacity-50 transition-opacity
                 ${isMenuOpen ? 'opacity-100 z-40' : 'opacity-0 -z-10'}
             `}
-            onClick={() => setIsMenuOpen(false)} 
+            onClick={() => setIsMenuOpen(false)}
         >
             <div
-                onClick={(e) => e.stopPropagation()} 
+                onClick={(e) => {
+                    if (e.target === e.currentTarget) {
+                        setIsMenuOpen(false);
+                    }
+                }}
                 className={`
-                    fixed top-0 right-0 h-full w-3/4 max-w-sm bg-white shadow-xl
-                    transform transition-transform duration-300 ease-in-out
+                    fixed top-0 right-0 h-full w-full   shadow-xl text-center 
+                    transform transition-transform duration-300 ease-in-out text-amber-400
                     ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
                 `}
             >
-                <div className="p-8">
-                    <h2 className="text-2xl font-bold mb-8">תפריט</h2>
-                    <ul className='flex flex-col gap-6 text-xl'>
-                        {navLinks.map((link) => (
+                <div className="h-full ">
+                    <ul className='flex flex-col gap-6 w-full text-2xl items-center h-full justify-center'>
+                        <div className='w-1/3'>
+                            <Link href={'/'}>
+                                <Logo />
+                                <p className='tattoo text-3xl md:text-4xl'>Arik-Tattoo</p>
+                            </Link>
+                        </div>
+                        {mobileMenuLinks.map((link) => (
                             <li key={link.href}>
-                                <Link href={link.href} onClick={handleLinkClick} className='hover:text-gray-500 transition-colors'>
+                                <Link href={link.href} onClick={handleLinkClick}
+                                    className='hover:text-gray-500 transition-colors'>
                                     {link.label}
                                 </Link>
                             </li>

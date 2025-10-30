@@ -1,9 +1,10 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+
 import Hero from "@/components/Hero";
+import Header from "@/components/Header";
 import Section from "@/components/Section";
 import StickyHeader from "@/components/StickyHeader";
-import Link from "next/link";
+import HomeMeSection from "@/components/HomeMeSection";
+
 
 export default function Home() {
   return (
@@ -19,9 +20,15 @@ export default function Home() {
             <StickyHeader />
           </div>
 
-        <Section color='pink' />
-        <Section color='lime' />
-        <Section color='brown' />
+        <Section color=''>
+          <HomeMeSection />
+        </Section>
+        <Section color='lime' >
+          <p>sasd</p>
+        </Section>
+        <Section color='brown' >
+          <p>sdasd</p>
+        </Section>
 
         {/* <Home /> */}
 

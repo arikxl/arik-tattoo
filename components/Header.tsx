@@ -3,10 +3,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import HamburgerBtn from './buttons/HamburgerBtn';
-import MobileMenu from './MobileMenu';
 
-export type NavLink = {
+import MobileMenu from './MobileMenu';
+import HamburgerBtn from './buttons/HamburgerBtn';
+
+type NavLink = {
     href: string;
     label: string;
 };
@@ -42,16 +43,16 @@ const Header = () => {
 
 
                 <Link href='/' className='flex items-center gap-2'>
+                <span className='self-end text-4xl tattoo tracking-wide font-light'>Arik-Tattoo</span>
                     <Image
                         src='https://res.cloudinary.com/arikxl/image/upload/v1761648396/Ella2023/g3nonsrlkzjzahb2fdbd.png'
                         alt='Arik-Tattoo Logo'
-                        width={50}
-                        height={50}
+                        width={1000}
+                        height={1000}
                         className='h-12 w-12' />
-                    <span className='text-2xl font-bold'>Arik-Tattoo</span>
                 </Link>
 
-                <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} navLinks={navLinks} />
+                <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}  />
 
             </div>
         </nav>
