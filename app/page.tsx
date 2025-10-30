@@ -14,10 +14,10 @@ export default function Home() {
           <Header />
         </div>
         <Hero />
-        <div className=" hidden md:block">
+          <div className=" hidden md:block">
 
-          <StickyHeader />
-        </div>
+            <StickyHeader />
+          </div>
 
         <Section color='pink' />
         <Section color='lime' />

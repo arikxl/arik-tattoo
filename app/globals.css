@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-
+html{
+    scroll-behavior: smooth;
+}
 
 /* 1. הגדרת האנימציה עצמה (מה היא עושה) */
 @keyframes fade-down {

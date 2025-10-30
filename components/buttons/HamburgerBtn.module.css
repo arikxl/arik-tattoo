@@ -1,0 +1,34 @@
+/* From Uiverse.io by talhabangyal, adapted for CSS Modules */
+.hamburger {
+    cursor: pointer;
+}
+
+.svg {
+    height: 3em;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+    fill: none;
+    stroke: rgb(51 65 85);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    transition:
+        stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lineTopBottom {
+    stroke-dasharray: 12 63;
+}
+
+
+.isOpen .svg {
+    transform: rotate(-45deg);
+}
+
+.isOpen .lineTopBottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}
