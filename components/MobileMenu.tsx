@@ -25,7 +25,7 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: MobileMenuProps) => {
     return (
         <div
             className={`
-                fixed inset-0 bg-slate-700 bg-opacity-50 transition-opacity
+                fixed inset-0 bg-slate-700 bg-opacity-50 transition-opacity md:hidden
                 ${isMenuOpen ? 'opacity-100 z-40' : 'opacity-0 -z-10'}
             `}
             onClick={() => setIsMenuOpen(false)}

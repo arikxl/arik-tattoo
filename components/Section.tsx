@@ -10,7 +10,7 @@ interface SectionProps {
 const Section = ({color, children}: SectionProps) => {
   return (
       <section style={{backgroundColor:color||''}}
-           className=' w-[100vw] mx-auto h-[70dvh] '>
+           className=' w-[100vw] mx-auto '>
           {children}
       </section>
   )

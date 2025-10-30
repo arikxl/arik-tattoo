@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Section from "@/components/Section";
 import StickyHeader from "@/components/StickyHeader";
 import HomeMeSection from "@/components/HomeMeSection";
+import HomeCaseShow from "@/components/HomeCaseShow";
 
 
 export default function Home() {
@@ -23,8 +24,8 @@ export default function Home() {
         <Section color=''>
           <HomeMeSection />
         </Section>
-        <Section color='lime' >
-          <p>sasd</p>
+        <Section color='' >
+          <HomeCaseShow />
         </Section>
         <Section color='brown' >
           <p>sdasd</p>
