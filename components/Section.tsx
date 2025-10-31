@@ -1,16 +1,15 @@
 import React from 'react'
 
 interface SectionProps {
-    color: string | null;
     children: React.ReactNode;
 }
 
 
 
-const Section = ({color, children}: SectionProps) => {
+const Section = ({ children}: SectionProps) => {
   return (
-      <section style={{backgroundColor:color||''}}
-           className=' w-[100vw] mx-auto '>
+      <section 
+           className=' w-screen mx-auto '>
           {children}
       </section>
   )

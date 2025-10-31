@@ -5,6 +5,7 @@ import Section from "@/components/Section";
 import StickyHeader from "@/components/StickyHeader";
 import HomeMeSection from "@/components/HomeMeSection";
 import HomeCaseShow from "@/components/HomeCaseShow";
+import Map from "@/components/Map";
 
 
 export default function Home() {
@@ -16,20 +17,18 @@ export default function Home() {
           <Header />
         </div>
         <Hero />
-          <div className=" hidden md:block">
+        <div className=" hidden md:block">
 
-            <StickyHeader />
-          </div>
+          <StickyHeader />
+        </div>
 
-        <Section color=''>
+        <Section >
           <HomeMeSection />
         </Section>
-        <Section color='' >
+        <Section  >
           <HomeCaseShow />
         </Section>
-        <Section color='brown' >
-          <p>sdasd</p>
-        </Section>
+        <Map />
 
         {/* <Home /> */}
 
