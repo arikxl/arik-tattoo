@@ -26,7 +26,7 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: MobileMenuProps) => {
         <div
             className={`
                 fixed inset-0 bg-slate-700 bg-opacity-50 transition-opacity md:hidden
-                ${isMenuOpen ? 'opacity-100 z-40' : 'opacity-0 -z-10'}
+                ${isMenuOpen ? 'opacity-100 z-40' : 'opacity-0 -z-10 hidden'}
             `}
             onClick={() => setIsMenuOpen(false)}
         >
@@ -44,7 +44,7 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: MobileMenuProps) => {
             >
                 <div className="h-full ">
                     <ul className='flex flex-col gap-6 w-full text-2xl items-center h-full justify-center'>
-                        <div className='w-1/3'>
+                        <div className='w-1/2'>
                             <Link href={'/'}>
                                 <Logo />
                                 <p className='tattoo text-3xl md:text-4xl'>Arik-Tattoo</p>

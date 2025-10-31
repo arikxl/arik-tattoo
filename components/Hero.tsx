@@ -2,6 +2,8 @@ import Link from 'next/link'
 
 import Logo from './Logo'
 import WhatsappHeaderButton from './buttons/WhatsappHeaderButton'
+import { FaRegWindowMinimize } from 'react-icons/fa'
+import { RiGeminiLine } from 'react-icons/ri'
 
 const Hero = () => {
     return (
@@ -25,7 +27,8 @@ const Hero = () => {
                         href='/generate'
                         className="text-center hover:bg-amber-400 cursor-pointer border-4 w-3/4 sm:w-60 border-amber-400 p-1 text-xl font-semibold flex items-center justify-center h-full"
                     >
-                        הדמיית קעקוע בAI
+                        הדמיית קעקוע בAI &nbsp; <RiGeminiLine />
+
                     </Link>
                 </div>
 

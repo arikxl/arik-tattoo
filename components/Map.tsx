@@ -6,7 +6,7 @@ const Map = () => {
 
     return (
 
-        <section
+        <section id="map"
             className='w-screen py-6'>
             
             <iframe

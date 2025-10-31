@@ -9,12 +9,12 @@ const NegishutPage = () => {
     return (
         <div>
             <Header />
-            <div className='w-9/10 sm:w-1/9 mx-auto py-2'>
+            <div className='w-1/2 sm:w-1/9 mx-auto py-2'>
                 <Logo />
             </div>
             <h1 className='text-2xl sm:text-6xl text-center'>הצהרת נגישות</h1>
             <div className='w-8/10 mx-auto '>
-                <p className='my-4 text-2xl'>
+                <p className='my-4 text-xl md:text-2xl'>
                     אני מאמין במתן הזדמנות שווה לכל אדם, ולכן פעלתי רבות כדי להנגיש אתר זה עבור אנשים עם מוגבלות. מטרתי היא לאפשר לכל הגולשים חווית שימוש נוחה, ברורה ופשוטה. אני מחויב להנגשת האתר ועושה מאמצים מתמשכים לשפר את הנגישות, כחלק מתפיסת השירות שלי ובהתאם לדרישות החוק.
                 </p>
 

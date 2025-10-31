@@ -32,7 +32,7 @@ const SocialBar = () => {
               <Link href={'/negishut'} className="underline" >
                   הצהרת נגישות
               </Link>
-              <Link href={''} className="underline">
+              <Link href={'/privacy'} className="underline">
                   מדיניות פרטיות
               </Link>
               <Link href={''} className="underline">
