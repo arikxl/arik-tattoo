@@ -30,8 +30,6 @@ export default function Home() {
         </Section>
         <Map />
 
-        {/* <Home /> */}
-
       </main>
     </div>
   );

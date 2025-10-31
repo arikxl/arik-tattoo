@@ -11,6 +11,7 @@ const Map = () => {
             
             <iframe
                 src={mapSrc}
+                title='מפה'
                 width="80%" 
                 height="400"
                 style={{ border: 0 }} 
