@@ -39,21 +39,25 @@ const Header = () => {
                     ))}
                 </ul>
 
-                <HamburgerBtn setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen } />
+                <HamburgerBtn setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
 
 
 
-                <Link href='/' className='flex items-center gap-2'>
-                <span className='self-end text-4xl tattoo tracking-wide font-light'>Arik-Tattoo</span>
+                <Link href='/' className='flex items-center gap-2  justify-center'>
+                    {/* <Link href='/' className='flex items-end gap-2 bg-red-400 justify-center'></Link> */}
+                    <span className=' pt-2 text-4xl tattoo tracking-wide font-light flex items-end'>
+                        Arik-Tattoo
+                    </span>
                     <Image
                         src='https://res.cloudinary.com/arikxl/image/upload/v1761648396/Ella2023/g3nonsrlkzjzahb2fdbd.png'
                         alt='Arik-Tattoo Logo'
                         width={1000}
                         height={1000}
-                        className='h-12 w-12' />
+                        className='w-12 '
+                    />
                 </Link>
 
-                <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}  />
+                <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
             </div>
         </nav>

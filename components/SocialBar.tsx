@@ -3,7 +3,7 @@ import React from 'react'
 
 const SocialBar = () => {
   return (
-      <section className='bg-amber-400 py-12 text-black'>
+      <section className='bg-amber-400 py-6 md:py-12 text-black'>
           <div>
               <ul className=' flex gap-6 justify-center items-center text-2xl mb-4'>
                   <Link href={''} aria-label="Follow me on Instagram"

@@ -1,8 +1,7 @@
-// File: app/terms-of-use/page.jsx
-
-import Header from '@/components/Header';
-import Logo from '@/components/Logo';
 import React from 'react';
+
+import Logo from '@/components/Logo';
+import Header from '@/components/Header';
 
 const TermsOfUsePage = () => {
     return (
