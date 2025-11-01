@@ -35,7 +35,7 @@ const SocialBar = () => {
               <Link href={'/privacy'} className="underline">
                   מדיניות פרטיות
               </Link>
-              <Link href={''} className="underline">
+              <Link href={'/term-of-use'} className="underline">
                   תנאי שימוש
               </Link>
           </div>

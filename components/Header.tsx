@@ -13,7 +13,8 @@ type NavLink = {
 };
 
 const navLinks: NavLink[] = [
-    { href: '/', label: 'מי אני?' },
+    { href: '/', label: 'דף הבית' },
+    { href: '/about', label: 'מי אני?' },
     { href: '/generate', label: 'הדמיית AI' },
     { href: '/faq', label: 'שאלות ותשובות' },
     { href: '/tattoos', label: 'קעקועים' },
