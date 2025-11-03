@@ -9,7 +9,7 @@ type MobileMenuProps = {
 
 const mobileMenuLinks = [
     // { href: '/', label: 'דף הבית' },
-    { href: '/about', label: 'מי אני?' },
+    { href: '/about', label: 'הסיפור שלי' },
     { href: '/generate', label: 'הדמיית AI' },
     { href: '/faq', label: 'שאלות ותשובות' },
     { href: '/tattoos', label: 'קעקועים' },

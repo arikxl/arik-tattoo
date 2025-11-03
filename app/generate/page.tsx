@@ -2,6 +2,7 @@
 'use client'
 
 
+import Header from '@/components/Header'
 import IdeaForm from '@/components/IdeaForm'
 import ImgPreview from '@/components/ImgPreview'
 import React, { useState } from 'react'
@@ -48,6 +49,7 @@ const GenerateTattooPage = () => {
 
   return (
     <div>
+      <Header />
       <IdeaForm handleGenerate={handleGenerate} />
 
       {isLoading
