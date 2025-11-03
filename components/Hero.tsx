@@ -2,7 +2,6 @@ import Link from 'next/link'
 
 import Logo from './Logo'
 import WhatsappHeaderButton from './buttons/WhatsappHeaderButton'
-import { FaRegWindowMinimize } from 'react-icons/fa'
 import { RiGeminiLine } from 'react-icons/ri'
 
 const Hero = () => {

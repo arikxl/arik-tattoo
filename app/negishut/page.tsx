@@ -98,7 +98,7 @@ const NegishutPage = () => {
                             <strong>טלפון:</strong> <a href={`tel:972506860169`} className="text-blue-600 hover:underline">050-6860169</a>
                         </p>
                         <p>
-                            <strong>דוא"ל:</strong> <a href={`mailto:arikxl@gmail.com`} className="text-blue-600 hover:underline">arikxl@gmail.com</a>
+                            <strong>דוא&quot;ל:</strong> <a href={`mailto:arikxl@gmail.com`} className="text-blue-600 hover:underline">arikxl@gmail.com</a>
                         </p>
                     </div>
                 </div>
