@@ -7,12 +7,12 @@ import SocialBar from "@/components/SocialBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["hebrew", "latin"],
+  subsets: [ "latin"],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-  subsets: ["hebrew", "latin"],
+  subsets: [ "latin"],
 });
 
 export const metadata: Metadata = {
