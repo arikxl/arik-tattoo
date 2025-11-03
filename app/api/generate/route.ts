@@ -27,14 +27,17 @@ export async function POST(request: Request) {
         });
         console.log(response)
             
-            // חיפוש החלק שמכיל את נתוני התמונה
-            for (const part of response.candidates[0].content.parts) {
-                if (part.inlineData) {
-                    // במקום לשמור לקובץ, אנחנו מחזירים את המידע כ-base64 לדפדפן
-                    const imageData = part.inlineData.data;
-                    return NextResponse.json({ imageData });
-                }
+        const parts = response.candidates?.[0]?.content?.parts ?? [];
+
+        // 'parts' הוא עכשיו או המערך שחיפשת, או מערך ריק.
+        // הלולאה בטוחה לחלוטין.
+        for (const part of parts) {
+            if (part.inlineData) {
+                // במקום לשמור לקובץ, אנחנו מחזירים את המידע כ-base64 לדפדפן
+                const imageData = part.inlineData.data;
+                return NextResponse.json({ imageData });
             }
+        }
 
 
         // אם לא נמצאה תמונה בתשובה
