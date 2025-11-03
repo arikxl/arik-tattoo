@@ -2,7 +2,6 @@ import WhatsappHeaderButton from '@/components/buttons/WhatsappHeaderButton'
 import Header from '@/components/Header'
 import Logo from '@/components/Logo'
 import Image from 'next/image'
-import React from 'react'
 
 const AboutPage = () => {
     return (
@@ -28,7 +27,7 @@ const AboutPage = () => {
                             אני מזמין אתכם להסתכל בתיק העבודות שלי וליצור איתי קשר. בואו נהפוך את הסיפור שלכם ליצירת אמנות.
                         </p>
 
-                        <div className=''>
+                        <div className='flex justify-center'>
                             <WhatsappHeaderButton />
                         </div>
                     </div>
@@ -39,7 +38,7 @@ const AboutPage = () => {
                                 src={'https://res.cloudinary.com/arikxl/image/upload/v1762160122/Ella2023/k9tcovi8nubkjctpiio9.png'}
                                 width={1000}
                                 height={1000}
-                                className='shadow-xl rounded-xl -rotate-12 shadow-white'
+                                className='shadow-xl rounded-xl -rotate-12 shadow-slate-700'
                             />
                         </div>
 
