@@ -20,19 +20,38 @@ const IdeaForm = ({ handleGenerate }: IdeaFormProps) => {
     }
 
     return (
-        <form className='flex flex-col md:flex-row  gap-3'
+        <form
+            className='flex flex-col md:flex-row gap-3 w-full'
             onSubmit={submitHandle}
         >
-            <input type='text' placeholder='Minimalistic phoenix with geometric wings'
-                className='flex-1 border rounded-xl px-4 py-3 outline-none'
-                value={iptValue} onChange={(e) => setIptValue(e.target.value)}
+            <input
+                type='text'
+                placeholder='מה הרעיון שלך?'
+                className='
+          flex-1 w-full px-4 py-3 
+          bg-neutral-100 text-neutral-900 
+          border border-neutral-700 
+          placeholder-neutral-500 
+          focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent
+          transition-all duration-200
+        '
+                value={iptValue}
+                onChange={(e) => setIptValue(e.target.value)}
             />
-        
+
             <button
-                className="text-center hover:bg-amber-400 cursor-pointer border-4 w-full md:w-1/4 border-amber-400 p-1 text-xl font-semibold flex items-center justify-center h-full"
+                type="submit"
+                className="
+          flex w-full md:w-auto items-center justify-center gap-2 
+          px-6 py-3 
+          bg-amber-400 text-neutral-900 
+          font-semibold text-lg cursor-pointer
+          hover:bg-amber-300 
+          focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-neutral-900
+          transition-colors duration-200
+        "
             >
-                Generate
-                <Send className='w-4 h-4' />
+                <span dir='ltr'>Let&rsquo;s Go!</span>
             </button>
         </form>
     )
