@@ -1,0 +1,78 @@
+/* FaqBento.css */
+
+.faq-bento-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+
+    /* ברירת מחדל (מובייל): עמודה אחת. כל הפריטים יהיו ברוחב מלא. */
+    grid-template-columns: 1fr;
+}
+
+.faq-bento-card {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.faq-bento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.faq-icon {
+    font-size: 2.5rem;
+    color: #fcd34d;
+    /* <-- שונה לצבע amber-400 */
+    margin-bottom: 1rem;
+}
+
+.faq-question {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: #ffffff;
+}
+
+.faq-answer {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #cccccc;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* --- רספונסיביות --- */
+
+/* טאבלט (ומעלה) - 2 עמודות */
+/* שונה מ-640px ל-768px כדי לתקן את בעיית המובייל */
+@media (min-width: 768px) {
+    .faq-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* קלאסים ששולטים בגודל הכרטיסיות - נכנסים לפעולה רק מטאבלט ומעלה */
+    .span-col-2 {
+        grid-column: span 2;
+    }
+
+    .span-row-2 {
+        grid-row: span 2;
+    }
+}
+
+/* דסקטופ (ומעלה) - 4 עמודות */
+@media (min-width: 1024px) {
+    .faq-bento-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-flow: dense;
+        /* מפעילים 'דחיסה' רק בדסקטופ */
+    }
+
+    /* הגדרות ה-span נשארות זהות, אך כעת הן ביחס ל-4 עמודות */
+}
