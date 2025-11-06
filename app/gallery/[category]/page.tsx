@@ -1,36 +1,48 @@
-import { getImagesByCategory } from "@/app/data/galleryData";
+
+// import { getImagesByCategory } from "@/app/data/galleryData";
+import Gallery from "@/components/Gallery";
 import Header from "@/components/Header";
-import Image from 'next/image'; 
+import HomeCaseShow from "@/components/HomeCaseShow";
+// import Image from 'next/image';
+
+
+
 
 
 const getGalleryTitle = (slug: string) => {
     if (slug === 'all') return 'הגלריה המלאה';
-    if (slug === 'tattoos') return 'גלריית קעקועים';
-    if (slug === 'piercing') return 'גלריית פירסינג';
+    if (slug === 'tattoos') return 'קעקועים';
+    if (slug === 'piercing') return 'פירסינג';
     if (slug === 'large') return 'קעקועים גדולים';
     if (slug === 'small') return 'קעקועים קטנים';
-    if (slug === 'sleeve') return 'קעקועים שרוול';
+    if (slug === 'sleeve') return 'שרוולים';
 
     return `גלריית ${slug.replace('-', ' ')}`;
 };
 
 
 
-// הקומפוננטה מקבלת 'params' - זה מגיע מהשם של התיקייה [category]
 export default function GalleryPage({ params }: { params: { category: string } }) {
 
-    const categorySlug = params.category; 
-    const imagesToShow = getImagesByCategory(categorySlug);
+    const categorySlug = params.category;
+    // const imagesToShow = getImagesByCategory(categorySlug);
 
     const pageTitle = getGalleryTitle(categorySlug);
 
 
-    return (
-        <div>
-            <Header />
-            <h1>{pageTitle}</h1>
 
-            {imagesToShow.length > 0 ? (
+    return (
+        <div className="">
+            <Header />
+            <h1 className='py-6 text-2xl sm:text-6xl text-center'>{pageTitle} </h1>
+            <div className='w-8/10 mx-auto '>
+
+
+
+                <Gallery category={categorySlug} />
+
+
+                {/* {imagesToShow.length > 0 ? (
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
                     {imagesToShow.map(image => (
                         <div key={image.id} style={{ width: '300px' }}>
@@ -46,7 +58,11 @@ export default function GalleryPage({ params }: { params: { category: string } }
                 </div>
             ) : (
                 <p>לא נמצאו תמונות בקטגוריה זו.</p>
-            )}
+            )} */}
+
+
+                <HomeCaseShow />
+            </div>
         </div>
     );
 }

@@ -12,7 +12,6 @@ html{
 }
 
 
-/* 1. הגדרת האנימציה עצמה (מה היא עושה) */
 @keyframes fade-down {
     from {
         opacity: 0;
@@ -25,7 +24,90 @@ html{
     }
 }
 
-/* 2. יצירת קלאס שמשתמש באנימציה */
 .animate-fade-down {
     animation: fade-down 0.5s ease-out;
 }
+
+
+
+/* --- גלריית גריד מותאמת אישית --- */
+
+.image-grid {
+    display: grid;
+
+    /* יוצר עמודות רספונסיביות.
+    כל עמודה תהיה ברוחב מינימלי של 280px.
+    הדפדפן יכניס כמה עמודות שהוא יכול ברוחב המסך.
+    ה- '1fr' גורם להן להתחלק שווה בשווה.
+  */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    /* גובה בסיסי לכל שורה בגריד */
+    grid-auto-rows: 280px;
+
+    /* מרווחים בין התמונות */
+    gap: 1.5rem;
+    /* 24px */
+}
+
+/* כל פריט בגריד.
+  זה ה-div שעוטף את התמונה.
+*/
+.grid-item {
+    position: relative;
+    /* חובה עבור next/image fill={true} */
+    border-radius: 12px;
+    overflow: hidden;
+    /* כדי שהפינות המעוגלות יעבדו */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* הפריט המיוחד שלנו - בגודל שונה */
+.grid-item-large {
+    /* גורם לפריט לתפוס 2 עמודות */
+    grid-column: span 2;
+    /* גורם לפריט לתפוס 2 שורות */
+    grid-row: span 2;
+}
+
+/* ------ אפקטים וליטושים ------ */
+
+/* התמונה עצמה (בתוך ה-div) */
+.grid-item img {
+    transition: transform 0.4s ease-in-out;
+}
+
+/* אפקט ריחוף (hover) */
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.grid-item:hover img {
+    transform: scale(1.05);
+    /* זום קטן לתמונה */
+}
+
+/* התאמה למסכים קטנים (מובייל) */
+@media (max-width: 640px) {
+    .image-grid {
+        /* במובייל, נרצה שכל העמודות יהיו ברוחב 1fr מלא */
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        grid-auto-rows: 350px;
+        /* גובה אחיד במובייל */
+    }
+
+    /* במובייל, אנחנו לא רוצים שאף פריט יתפוס 2 עמודות
+    (כי יש רק עמודה אחת)
+  */
+    .grid-item-large {
+        grid-column: span 1;
+        /* מחזיר ל-1 */
+        grid-row: span 1;
+        /* מחזיר ל-1 */
+    }
+}
+
+

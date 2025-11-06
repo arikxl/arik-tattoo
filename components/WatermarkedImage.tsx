@@ -34,10 +34,8 @@ const WatermarkedImage = ({ src }: WatermarkedImageProps) => {
             canvas.width = image.naturalWidth || image.width;
             canvas.height = image.naturalHeight || image.height;
 
-            // 1. צייר את התמונה המקורית
             context.drawImage(image, 0, 0);
 
-            // 2. הוסף סימן מים - רק אם נדרש!
             if (withWatermark) {
                 const lines = watermarkText.split('\n');
 
@@ -72,17 +70,13 @@ const WatermarkedImage = ({ src }: WatermarkedImageProps) => {
         image.src = src;
     };
 
-    // --- טיפול בלחיצות ---
 
-    // לחיצה בודדת (עם בדיקת מקש Q)
     const handleSingleClick = () => {
-        // הורד עם סימן מים, אלא אם Q לחוץ
         startDownloadProcess(true);
     };
 
-    // לחיצה כפולה (תמיד בלי סימן מים)
     const handleDoubleClick = () => {
-        startDownloadProcess(false); // false = ללא סימן מים
+        startDownloadProcess(false); 
     };
 
     return (
@@ -93,8 +87,8 @@ const WatermarkedImage = ({ src }: WatermarkedImageProps) => {
                 width={500}
                 height={500}
                 className='rounded-xl shadow-lg object-cover w-full h-auto cursor-pointer'
-                onClick={handleSingleClick} // שונה ל-handleSingleClick
-                onDoubleClick={handleDoubleClick} // הוספנו onDoubleClick
+                onClick={handleSingleClick} 
+                onDoubleClick={handleDoubleClick} 
                 priority
             />
 

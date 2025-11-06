@@ -14,7 +14,19 @@ const nextConfig: NextConfig = { // הוספתי את הטיפוס NextConfig ג
         hostname: 'res.cloudinary.com',
         port: '',
         pathname: '/**', // או תצורת נתיב ספציפית אם יש לך
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'pixabay.com',
+        port: '',
+        pathname: '/**', 
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.pixabay.com', 
+        port: '',
+        pathname: '/**', 
+      },
     ],
   },
 };

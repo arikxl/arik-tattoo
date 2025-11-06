@@ -9,7 +9,7 @@ export default function StickyHeader() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const heroHeight = window.innerHeight * 0.9; // 90dvh
+            const heroHeight = window.innerHeight * 0.9; 
             if (window.scrollY > heroHeight) {
                 setIsSticky(true);
             } else {

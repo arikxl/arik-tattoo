@@ -25,12 +25,11 @@ export async function POST(request: Request) {
             Prefer black and white with detailed line art and shading. Avoid text and backgrounds.
             `,
         });
-        console.log(response)
+        // console.log(response)
             
         const parts = response.candidates?.[0]?.content?.parts ?? [];
 
         // 'parts' הוא עכשיו או המערך שחיפשת, או מערך ריק.
-        // הלולאה בטוחה לחלוטין.
         for (const part of parts) {
             if (part.inlineData) {
                 // במקום לשמור לקובץ, אנחנו מחזירים את המידע כ-base64 לדפדפן

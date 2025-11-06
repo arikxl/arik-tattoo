@@ -1,7 +1,3 @@
-// src/data/faqData.js
-
-// ייבאתי אייקונים חדשים (FaRegDotCircle, FaRegIdCard, MdHealing)
-// והסרתי את הישנים (FaPaintBrush, FaRegTimesCircle, FaPalette, BsBandage)
 import {
     FaRegCreditCard, FaRegCalendarAlt, FaShieldAlt,
     FaPencilAlt, FaFileInvoiceDollar, FaRegCalendarTimes, FaRegClock,
@@ -58,7 +54,7 @@ export const faqData: Question[]  = [
         id: 5,
         question: "איך מטפלים בקעקוע חדש?",
         answer: "תקבלו ממני הוראות מדויקות בסוף התהליך. בגדול: לשמור על ניקיון, לשטוף במים וסבון, לייבש בעדינות ולמרוח משחה ייעודית בשכבה דקה.",
-        icon: MdHealing, // אייקון שהחלפנו בפעם הקודמת
+        icon: MdHealing, 
         spanCol: 2,
         spanRow: 2,
     },
@@ -130,7 +126,7 @@ export const faqData: Question[]  = [
         id: 14,
         question: "האם אתה עושה פירסינגים?",
         answer: "כן, אני מבצע פירסינגים בסטודיו עם מחט סטרילית (לא אקדח). אני משתמש בתכשיטים איכותיים מטיטניום. יש לקבוע תור מראש.",
-        icon: FaRegDotCircle, // אייקון חדש
+        icon: FaRegDotCircle, 
         spanCol: 2,
         spanRow: 1,
     },
@@ -154,7 +150,7 @@ export const faqData: Question[]  = [
         id: 17,
         question: "איך מטפלים בפירסינג חדש?",
         answer: "יש לשטוף את האזור עם מי מלח (סליין) פעמיים ביום, לא לגעת עם ידיים מלוכלכות, ולא לסובב את התכשיט. תקבל ממני הוראות מדויקות.",
-        icon: FaRegCheckCircle, // שימוש חוזר באייקון מתאים
+        icon: FaRegCheckCircle, 
         spanCol: 1,
         spanRow: 1,
     },
@@ -194,7 +190,7 @@ export const faqData: Question[]  = [
         id: 22,
         question: "מאיזה גיל עושים פירסינג?",
         answer: "פירסינגים בסיסיים (כמו תנוך) אני עושה מגיל 16 באישור הורה. פירסינגים מורכבים יותר (לשון, גבה, פטמה וכו') רק מגיל 18 בהצגת תעודה.",
-        icon: FaRegIdCard, // אייקון חדש
+        icon: FaRegIdCard, 
         spanCol: 2,
         spanRow: 1,
     },
