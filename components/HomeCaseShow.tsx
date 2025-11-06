@@ -6,18 +6,22 @@ import React from 'react';
 const showcaseArray = [
     {
         imgUrl: 'https://res.cloudinary.com/arikxl/image/upload/v1761830978/Ella2023/kvcctrsfjdsiokg8t0xp.jpg',
-        title: 'קעקועים גדולים'
+        title: 'קעקועים גדולים',
+        href:'/gallery/large'
     },
     {
         imgUrl: 'https://res.cloudinary.com/arikxl/image/upload/v1761831102/Ella2023/uo6c4mt2pgd2bfv3cfif.jpg',
-        title: 'שרוולים'
+        title: 'שרוולים',
+        href:'/gallery/sleeve'
     },
     {
         imgUrl: 'https://res.cloudinary.com/arikxl/image/upload/v1761831509/Ella2023/dewkxpxg1tlukvwm7dtb.jpg',
+        href:'/gallery/small',
         title: 'קעקועים קטנים'
     },
     {
         imgUrl: 'https://res.cloudinary.com/arikxl/image/upload/v1761823878/Ella2023/vg3mljdtl9ft22jrfpgt.webp',
+        href:'/gallery/piercing',
         title: 'פירסינג'
     },
 ]
@@ -38,7 +42,7 @@ const HomeCaseShow = () => {
                 <div className='z-20 w-9/10 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4'>
                     {
                         showcaseArray.map((item) => (
-                            <Link key={item.title} href=''
+                            <Link key={item.title} href={item.href}
                                 className='cursor-pointer group'
                             >
                                 <figure 
@@ -61,7 +65,7 @@ const HomeCaseShow = () => {
                 </div>
 
 
-                <Link href={'/gallery'} className='flex gap-4 md:gap-8 items-center justify-center md:py-4 group'>
+                <Link href={'/gallery/all'} className='flex gap-4 md:gap-8 items-center justify-center md:py-4 group'>
                     <div className='bg-amber-400 w-full h-0.5'></div>
                     <h2 className='text-2xl md:text-6xl whitespace-nowrap '>
                         לגלריה המלאה

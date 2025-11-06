@@ -1,7 +1,7 @@
 
 import './FaqBento.css'; 
 import Header from '@/components/Header'
-import { faqData } from '../data/data.js'
+import { faqData } from '../data/data'
 
 function QandAPage() {
   

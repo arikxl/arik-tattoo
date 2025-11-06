@@ -99,7 +99,7 @@ const WatermarkedImage = ({ src }: WatermarkedImageProps) => {
             />
 
             <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-                          font-bold rounded-md text-amber-600/50 text-6xl w-full 
+                          font-bold rounded-md text-amber-600/50 text-4xl w-full 
                           pointer-events-none whitespace-pre-line text-center">
                 {watermarkText}
             </p>

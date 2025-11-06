@@ -10,8 +10,18 @@ import {
     FaRegComments, FaRegSun, FaFirstAid, FaRegDotCircle, FaRegIdCard
 } from 'react-icons/fa';
 import { MdOutlineCake, MdOutlineLocalDrink, MdHealing } from 'react-icons/md';
+import { IconType } from "react-icons";
 
-export const faqData = [
+export interface Question {
+    id: number;
+    question: string; 
+    answer: string;
+    icon: IconType;
+    spanCol: number;
+    spanRow: number; 
+}
+
+export const faqData: Question[]  = [
     {
         id: 1,
         question: "מאיזה גיל?",

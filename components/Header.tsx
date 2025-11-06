@@ -17,8 +17,8 @@ const navLinks: NavLink[] = [
     { href: '/about', label: 'הסיפור שלי' },
     { href: '/generate', label: 'הדמיית AI' },
     { href: '/faq', label: 'שאלות ותשובות' },
-    { href: '/tattoos', label: 'קעקועים' },
-    { href: '/piercings', label: 'פירסינג' },
+    { href: '/gallery/tattoos', label: 'קעקועים' },
+    { href: '/gallery/piercing', label: 'פירסינג' },
 ];
 
 const Header = () => {
