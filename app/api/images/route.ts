@@ -28,8 +28,7 @@ export async function GET(request: NextRequest) {
     }
 
     // 3. הרכבת ה-URL המלא לקריאה ל-Pixabay
-    const URL = `https://pixabay.com/api/?key=${API_KEY}&q=${encodeURIComponent(query)}&image_type=photo`;
-
+    const URL = `https://pixabay.com/api/?key=${API_KEY}&q=${encodeURIComponent(query)}&image_type=photo&safesearch=true`;
     try {
         // 4. ביצוע קריאת ה-fetch האמיתית ל-Pixabay (מהשרת שלנו)
         const pixabayResponse = await fetch(URL, {
