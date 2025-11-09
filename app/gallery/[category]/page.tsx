@@ -13,9 +13,9 @@ const getGalleryTitle = (slug: string) => {
     if (slug === 'all') return 'הגלריה המלאה';
     if (slug === 'tattoos') return 'קעקועים';
     if (slug === 'piercing') return 'פירסינג';
-    if (slug === 'large') return 'קעקועים גדולים';
-    if (slug === 'small') return 'קעקועים קטנים';
-    if (slug === 'sleeve') return 'שרוולים';
+    if (slug === 'large-tattoos') return 'קעקועים גדולים';
+    if (slug === 'small-tattoos') return 'קעקועים קטנים';
+    if (slug === 'sleeve-tattoos') return 'שרוולים';
 
     return `גלריית ${slug.replace('-', ' ')}`;
 };

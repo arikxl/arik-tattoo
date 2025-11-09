@@ -83,7 +83,7 @@ function Gallery({ category }: GalleryProps) {
                     })}
                 </div>
             ) : (
-                <p>לא נמצאו תמונות בקטגוריה זו.</p>
+              !loading &&  <p>לא נמצאו תמונות בקטגוריה זו.</p>
             )}
         </div>
     );

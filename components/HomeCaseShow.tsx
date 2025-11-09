@@ -7,16 +7,16 @@ const showcaseArray = [
     {
         imgUrl: 'https://res.cloudinary.com/arikxl/image/upload/v1761830978/Ella2023/kvcctrsfjdsiokg8t0xp.jpg',
         title: 'קעקועים גדולים',
-        href:'/gallery/large'
+        href:'/gallery/tattoos-large'
     },
     {
         imgUrl: 'https://res.cloudinary.com/arikxl/image/upload/v1761831102/Ella2023/uo6c4mt2pgd2bfv3cfif.jpg',
         title: 'שרוולים',
-        href:'/gallery/sleeve'
+        href:'/gallery/tattoos-sleeve'
     },
     {
         imgUrl: 'https://res.cloudinary.com/arikxl/image/upload/v1761831509/Ella2023/dewkxpxg1tlukvwm7dtb.jpg',
-        href:'/gallery/small',
+        href:'/gallery/tattoos-small',
         title: 'קעקועים קטנים'
     },
     {
