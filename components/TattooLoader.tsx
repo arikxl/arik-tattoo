@@ -38,7 +38,7 @@ const styles =
 
 const TattooLoader = () => {
     return (
-        <div className='mt-24 '>
+        <div className='my-24 '>
             <style>{styles}</style>
             <div className="loader ">
             </div>
