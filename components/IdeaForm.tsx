@@ -1,5 +1,4 @@
 'use client'
-import { Send } from 'lucide-react'
 import { useState } from 'react';
 
 interface IdeaFormProps {

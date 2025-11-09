@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react';
-import { getImagesByCategory } from '@/app/data/galleryData';
-import type { GalleryImage } from '@/app/data/galleryData';
+// import { getImagesByCategory } from '@/app/data/galleryData';
+// import type { GalleryImage } from '@/app/data/galleryData';
 import Image from 'next/image';
 import React from 'react';
 
@@ -21,9 +21,10 @@ interface PixabayImage {
 function Gallery({ category }: GalleryProps) {
 
 
-    const imagesToShow: GalleryImage[] = getImagesByCategory(category);
+    // const imagesToShow: GalleryImage[] = getImagesByCategory(category);
     const [images, setImages] = useState<PixabayImage[]>([]);
-    const [searchTerm, setSearchTerm] = useState(category === 'all' ? 'Tattoos piercing' : category);
+    const [searchTerm] = useState(category === 'all' ? 'Tattoos piercing' : category);
+    // const [searchTerm, setSearchTerm] = useState(category === 'all' ? 'Tattoos piercing' : category);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
